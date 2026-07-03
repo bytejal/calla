@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
-import 'signup_screen.dart';
 import '../home/home_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFAF8F5),
       body: SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 60),
+              const SizedBox(height: 50),
 
               const Text(
-                "Welcome Back",
+                "Create Account",
                 style: TextStyle(
                   fontSize: 34,
                   fontWeight: FontWeight.bold,
@@ -29,14 +28,28 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 10),
 
               const Text(
-                "Continue your wardrobe journey.",
+                "Start building your digital wardrobe.",
                 style: TextStyle(
                   fontSize: 16,
                   color: Color(0xFF6B7280),
                 ),
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 40),
+
+              TextField(
+                decoration: InputDecoration(
+                  hintText: "Username",
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(16),
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 20),
 
               TextField(
                 decoration: InputDecoration(
@@ -56,6 +69,21 @@ class LoginScreen extends StatelessWidget {
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: "Password",
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(16),
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: "Confirm Password",
                   filled: true,
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
@@ -86,10 +114,10 @@ class LoginScreen extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "Login",
+                    "Create Account",
                     style: TextStyle(
-                      fontSize: 18,
                       color: Colors.white,
+                      fontSize: 18,
                     ),
                   ),
                 ),
@@ -97,35 +125,21 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              const Center(
-                child: Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                    color: Colors.grey,
-                  ),
-                ),
-              ),
-
-              const Spacer(),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "Don't have an account?",
-                    style: TextStyle(color: Colors.grey),
+                    "Already have an account?",
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const SignUpScreen(),
-                        ),
-                      );
+                      Navigator.pop(context);
                     },
                     child: const Text(
-                      "Create Account",
+                      "Login",
                       style: TextStyle(
                         color: Color(0xFFC8B6A6),
                         fontWeight: FontWeight.bold,
