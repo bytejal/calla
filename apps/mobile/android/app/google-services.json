@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "522106908587",
+    "project_id": "calla-8888",
+    "storage_bucket": "calla-8888.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522106908587:android:7df6807eee49aa0299ecee",
+        "android_client_info": {
+          "package_name": "com.example.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOjfMBu-50lAVTXVVWeL0mPuE6WEqYcW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
